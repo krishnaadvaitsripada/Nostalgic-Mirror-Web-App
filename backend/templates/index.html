@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Image Upload</h1>
+    <form action="/upload_album" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".png, .jpg, .jpeg, .gif">
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Images in MongoDB:</h2>
+    {% for image in images %}
+        <img src="data:image/{{ image.filename.split('.')[-1] }};base64,{{ image.imageData }}" alt="{{ image.filename }}" style="max-width: 300px; margin: 10px;">
+    {% endfor %}
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+    <style>
+        .todo {
+            padding: 20px;
+            margin: 10px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>FlaskTODO</h1>
+    <hr>
+    <div class="content">
+    <form method="post">
+        <p>
+            <b><label for="content">Todo content</label></b>
+        </p>
+        <p>
+            <input type="text" name="content"
+                placeholder="Todo Content"></input>
+        </p>
+
+        <p>
+            <b><label for="degree">Degree</label></b>
+        </p>
+        <p>
+            <input id="degree-0" name="degree" required type="radio" value="Important">
+            <label for="degree-0">Important</label>
+        </p>
+        <p>
+            <input id="degree-1" name="degree" required type="radio" value="Unimportant">
+            <label for="degree-1">Unimportant</label>
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    {% for todo in todos %}
+        <div class="todo">
+            <p>{{ todo['content'] }} <i>({{ todo['degree']}})</i></p>
+            <form method="POST" action="{{ url_for('delete', id=todo['_id']) }}" >
+                <input type="submit" value="Delete Todo"
+                       onclick="return confirm('Are you sure you want to delete this entry?')">
+            </form>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html> -->
