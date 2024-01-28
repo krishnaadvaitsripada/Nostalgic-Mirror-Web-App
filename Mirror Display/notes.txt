@@ -1,0 +1,15 @@
+What I'm trying to achieve here:
+- using a database of images of people's faces 
+  with the file name being their full name,
+  I want to recognize faces over a video stream.
+- then, i want to figure out how can i use a pygame
+  display to draw graphics on top of the video 
+  stream from DeepFace
+
+Ideas:
+ - in the future, i want to use the age and emotion
+   detection feature
+
+How do we make DeepFace understand that there are different faces
+in the given photo album, then categorize each person, then ask
+the user on the frontend to give the faces names

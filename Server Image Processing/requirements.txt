@@ -1,0 +1,12 @@
+tensorflow
+opencv-python
+pandas
+matplotlib
+numpy
+deepface
+fire
+gunicorn
+keras
+mtcnn
+face_recognition
+imutils
