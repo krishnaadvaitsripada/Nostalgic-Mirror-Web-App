@@ -9,17 +9,25 @@
 <body>
     <h1>Image Upload for Album</h1>
     <form action="/upload_album" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".png, .jpg, .jpeg, .gif">
-        <input type="submit" value="Upload Album Image">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Username...">
+
+        <label for="file">Image</label>
+        <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg, .gif">
+        <input type="submit" value="Upload Album Image" >
     </form>
 
     <h1>Selfie Upload</h1>
     <form action="/upload_selfie" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".png, .jpg, .jpeg, .gif">
-        <input type="submit" value="Upload Selfie">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Username...">
+
+        <label for="file">Image</label>
+        <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg, .gif">
+        <input type="submit" value="Upload Selfie" >
     </form>
 
-    <h2>Album Images in MongoDB:</h2>
+    <h2>Album Images</h2>
     {% for image in images %}
         <img src="data:image/{{ image.filename.split('.')[-1] }};base64,{{ image.imageData }}" alt="{{ image.filename }}" style="max-width: 300px; margin: 10px;">
     {% endfor %}

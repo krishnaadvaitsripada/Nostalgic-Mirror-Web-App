@@ -77,7 +77,7 @@ def upload_album(
         return "No file part"
     
     file = request.files['file']
-    username = 'sangwoo'
+    username = request.form.get('username')
 
     if file.filename == '':
         return "No selected file"
@@ -110,7 +110,7 @@ def upload_selfie(
         return "No file part"
     
     file = request.files['file']
-    username = 'sangwoo'
+    username = request.form.get('username')
 
     if file.filename == '':
         return "No selected file"

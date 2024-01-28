@@ -1,17 +1,33 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./components/Home";
+import Home from "./components/Home/Home";
+import Login from "./components/UserAuth/Login";
+import Signup from "./components/UserAuth/Signup";
+import UploadPortal from "./components/UserPortal/UploadPortal";
+import Display from "./components/UserPortal/Display";
 
 const Router = () => {
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <App />,
+            element: <Home />,
         },
 
         {
-
-
-        }
+            path: "/login",
+            element: <Login />,
+        },
+        {
+            path: "/signup",
+            element: <Signup />,
+        },
+        {
+            path: "/upload",
+            element: <UploadPortal />,
+        },
+        {
+            path: "/display",
+            element: <Display />,
+        },
     ]);
 
     return <RouterProvider router={router} />;
