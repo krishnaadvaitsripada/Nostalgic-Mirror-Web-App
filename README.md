@@ -1,5 +1,7 @@
 # Nostalgic Mirror (UofTHacks 11)
 
+DevPost: https://devpost.com/software/nostalgic-mirror
+
 ### Inspiration
 Our inspiration originated from the aspiration to offer users a time-travel experience, enabling them to journey into their past. Recognizing the innate human inclination to cherish and revisit cherished memories, we came up with the idea of designing a magical mirror. This mirror serves as a portal to the past, inviting users to relive those precious moments in a nostalgic manner.
 
