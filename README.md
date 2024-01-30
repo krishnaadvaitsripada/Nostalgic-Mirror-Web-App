@@ -1,16 +1,16 @@
 # Nostalgic Mirror (UofTHacks 11)
 
 ### Inspiration
-Our inspiration originated from the aspiration to offer users a time-travel experience, enabling them to journey into their past. Recognizing the innate human inclination to cherish and revisit cherished memories, we pondered the idea of crafting a magical mirror. This mirror serves as a portal to the past, inviting users to relive those precious moments in a captivating and nostalgic manner.
+Our inspiration originated from the aspiration to offer users a time-travel experience, enabling them to journey into their past. Recognizing the innate human inclination to cherish and revisit cherished memories, we came up with the idea of designing a magical mirror. This mirror serves as a portal to the past, inviting users to relive those precious moments in a nostalgic manner.
 
 ### What it does
-The web app immerses users in a virtual mirror (screen) that dynamically showcases their memories through a display of their pictures.
+A virtual mirror software with a webcam that waits for people to walk in front of it, then show them nostalgic memories of them together from their uploaded photo albums through a web app. It uses facial recognition to identify people standing in front of the mirror, then search for their faces on their uploaded albums.
 
 ### How we built it
+- **Mirror:** Python, pygame, OpenCV and DeepFace libraries
 - **Frontend:** Crafted using HTML, CSS, and React.js.
 - **Backend:** Developed with Flask (Python).
 - **Database:** Utilized MongoDB.
-- **Other Frameworks:** Implemented OpenCV.
 
 ### Challenges we ran into
 - **Facial Recognition:** Faced challenges in achieving accurate facial recognition using OpenCV, encountering low accuracy and requiring extensive troubleshooting.
